@@ -1,3 +1,6 @@
+# large pkmn.json file -> download zip to access
+pkmn.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
