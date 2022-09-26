@@ -48,7 +48,6 @@ def type_input():
 def name_input():
     return "You came to the name input page!"
 
-
 #################################################
 # Running App
 #################################################
