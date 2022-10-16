@@ -1,0 +1,19 @@
+table th {
+  text-align: center; 
+}
+
+table td {
+  text-align: center; 
+}
+
+
+.table {
+  margin: auto;
+  width: 50%; 
+}
+
+#footer
+{
+    position:fixed;
+    bottom:0;
+}

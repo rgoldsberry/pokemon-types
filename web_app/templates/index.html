@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokemon App</title>
-</head>
-<body>
-  <h1>Welcome to my Pokemon App!</h1>
-  <a href="/type">Type Input</a>
-  <a href="/name">Name Input</a>
-  {{ table | safe }}
-</body>
-</html>
+{% extends "layout.html" %}
+{% block title %}Pokémon App{% endblock %}
+
+{% block content %}
+  <p>If you're like me you're pretty good at remembering how water, grass, and fire interact with each other. But the moment Dark/Ghost/Psychic get involved, all confidence goes out the window. Use this app to figure out what's gonna be super effective against whoever you're facing.</p>
+  <p>Use the "Type Input" page to manually input the types or use the "Name Input" page to type in a Pokemon's name and search for their types that way.</p>
+  <br>
+  <p>Happy battling!</p>
+{% endblock %}

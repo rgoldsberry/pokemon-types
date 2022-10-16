@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>{% block title %}{% endblock %}</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+  </script>  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+  </script>  
+  
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet" type="text/css" />  
+  {% endblock %}
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Gotta faint 'em all!</h1>
+      <p>Find out what you should(n't) hit that 'mon with.</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="/type" role="button">Type Input</a>
+        <a class="btn btn-primary btn-lg" href="/name" role="button">Name Input</a>
+      </p>
+    </div>
+    <div id="row">
+      <div id="col-xs-12">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    <div id="footer">
+      {% block footer %}
+      <p>Huge thanks to the <a href="https://pokeapi.co/">PokéApi</a> for the data. And to <a href="https://pokemondb.net/">PokémonDB</a> for helping me sort out some of the names.</p>
+      {% endblock %}
+    </div>
+
+  </div>
+</body>
