@@ -12,8 +12,8 @@ table td {
   width: 50%; 
 }
 
-#footer
-{
-    position:fixed;
-    bottom:0;
-}
+.container-fluid {
+  /* this forces the footer to stay at the bottom even if the content doesn't fill up the page */
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }

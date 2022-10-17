@@ -3,11 +3,27 @@
 
 {% block content %}
 
+
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    {{def_mult_table | safe}}
+  <div class="col-md-4 col-md-offset-4 text-center">
+    <!-- Handling Name Input calculations -->
+    {% if received['pkmn'] is defined %}
+      <h3>Pokémon You Want to Hit: {{received['pkmn']}}</h3>
+      {% if received['type2'] is defined %}
+        <h4>Types: {{received['type1'].title()}} and {{received['type2'].title()}}</h4>
+      {% else %}
+      <h4>Type: {{received['type1'].title()}}</h4>
+      {% endif %}
+    <!-- Handling Type Input calculations -->
+    {% else %}
+      <h3>Type 1 Input: {{received['type1'].title()}}</h3>
+      {% if received['type2'] is not none %}
+        <h3>Type 2 Input: {{received['type2'].title()}}</h3>
+      {% endif  %}   
+    {% endif  %} 
+    <br>
+    {{ received['def_mult'] | safe }}
   </div>
 </div>
-  
 
 {% endblock %}
