@@ -16,6 +16,7 @@ type_df = pd.read_sql("SELECT * FROM typemult", con = engine, index_col="type")
 type_list = list(type_df.index)
 
 name_df = pd.read_sql("SELECT name, type_1, type_2 FROM pkmn_name_type", con = engine, index_col="name")
+name_df.drop("Drop", inplace=True)
 
 # core function for deciding what to attack with
 def attack_with(type1, type2=None):
