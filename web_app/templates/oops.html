@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Oops{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 text-center">
+    <h2>{{ received['error'] }}</h2>
+    <br>
+    <h3><a href="{{ received['source'] }}">Try Again?</a></h3>
+  </div>
+</div>
+{% endblock %}
